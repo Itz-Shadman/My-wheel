@@ -9,7 +9,7 @@ const MyListings = () => {
   const [editingCar, setEditingCar] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
-  // Fetch cars
+  
   const fetchCars = async () => {
     setLoading(true);
     try {
@@ -27,7 +27,7 @@ const MyListings = () => {
     fetchCars();
   }, []);
 
-  // Delete car
+
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this car?")) return;
     try {
@@ -40,7 +40,7 @@ const MyListings = () => {
     }
   };
 
-  // Open modal for editing
+ 
   const handleEdit = (car) => {
     setEditingCar({
       ...car,
@@ -52,12 +52,12 @@ const MyListings = () => {
     setShowModal(true);
   };
 
-  // Handle input
+
   const handleChange = (e) => {
     setEditingCar({ ...editingCar, [e.target.name]: e.target.value });
   };
 
-  // Update car
+
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
@@ -131,7 +131,6 @@ const MyListings = () => {
         </div>
       )}
 
-      {/* Update Modal */}
       {showModal && editingCar && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-gray-500 p-6 rounded shadow w-96">
