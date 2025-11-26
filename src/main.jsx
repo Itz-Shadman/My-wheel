@@ -19,7 +19,7 @@ import AuthProvider, { AuthContext } from "./Pages/AuthProvider.jsx";
 import Signup from "./Pages/Signup.jsx";
 
 
-// Wrappers to pass userEmail from AuthContext
+
 const MyBookingsWrapper = () => {
   const { user } = useContext(AuthContext);
   return <MyBookings userEmail={user?.email} />;
