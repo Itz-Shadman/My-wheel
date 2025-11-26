@@ -7,7 +7,7 @@ const TopRatedCars = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/top-rated-cars") // Use the new endpoint
+      .get("http://localhost:3000/top-rated-cars") 
       .then((res) => setCars(res.data))
       .catch((err) => console.error(err));
   }, []);
