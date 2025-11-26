@@ -7,8 +7,8 @@ import { AuthContext } from "../Pages/AuthProvider";
 
 const CarDetails = () => {
   const { id } = useParams();
-  const { user } = useContext(AuthContext); // ✅ get logged-in user
-  const userEmail = user?.email; // ✅ userEmail from AuthContext
+  const { user } = useContext(AuthContext); 
+  const userEmail = user?.email; 
   const [car, setCar] = useState(null);
   const [loading, setLoading] = useState(false);
 
