@@ -35,7 +35,7 @@ const CarDetails = () => {
       });
       toast.success("Car booked successfully!");
       setCar({ ...car, status: "unavailable" });
-      window.dispatchEvent(new Event("booking-updated")); // update MyBookings
+      window.dispatchEvent(new Event("booking-updated")); 
     } catch {
       toast.error("Booking failed!");
     } finally {

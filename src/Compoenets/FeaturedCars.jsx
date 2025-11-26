@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router"; // ✅ important
+import { Link } from "react-router"; 
 
 const FeaturedCars = () => {
   const [cars, setCars] = useState([]);
@@ -24,7 +24,7 @@ const FeaturedCars = () => {
             <p className="text-gray-600 mt-1"><strong>Rent Price:</strong> ${car.rentPrice} / day</p>
             <p className="text-gray-600 mt-1"><strong>Provider:</strong> {car.providerName}</p>
             <Link
-              to={`/cars/${car._id}`} // ✅ navigates to CarDetails
+              to={`/cars/${car._id}`}
               className="mt-auto bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 text-center"
             >
               View Details
