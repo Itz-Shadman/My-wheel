@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router"; // use react-router-dom, not "react-router"
+import { NavLink } from "react-router"; 
 import { AuthContext } from "../Pages/AuthProvider";
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext); // match the context function name
+  const { user, logOut } = useContext(AuthContext); 
   const [open, setOpen] = useState(false);
 
   const handleLogout = async () => {
     try {
-      await logOut(); // ensure async handling
+      await logOut();
       setOpen(false);
     } catch (err) {
       console.error("Logout failed:", err.message);
@@ -19,12 +19,12 @@ const Navbar = () => {
     <nav className="bg-gray-800 shadow-xl sticky top-0 z-10">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
 
-        {/* Logo */}
+        
         <span className="text-3xl font-extrabold text-yellow-500">
           Rent<span className="text-white">Car</span>
         </span>
 
-        {/* Links */}
+        
         <ul className="hidden md:flex space-x-6 text-white items-center">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/add-car">Add Car</NavLink></li>
