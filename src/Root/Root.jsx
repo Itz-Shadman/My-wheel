@@ -10,7 +10,7 @@ const Root = () => {
             <Toaster position="top-right" />
             <Navbar />
             
-            {/* Main content */}
+          
             <main className="flex-1">
                 <Outlet />
             </main>
