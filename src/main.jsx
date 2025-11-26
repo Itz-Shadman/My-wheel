@@ -9,7 +9,7 @@ import MyBookings from "./Pages/MyBookings.jsx";
 import BrowseCars from "./Pages/BrowseCars.jsx";
 import Login from "./Pages/Login.jsx";
 import NotFound from "./Compoenets/NotFound.jsx"
-// import AuthProvider, { AuthContext } from "./Pages/AuthProvider.jsx";
+
 
 import PrivateRoute from "./Routes.jsx/PrivateRoute.jsx";
 import { useContext } from "react";
