@@ -21,7 +21,7 @@ const AddCar = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/cars", { ...formData, providerName: user.displayName });
+      await axios.post("https://mywheels.vercel.app/cars", { ...formData, providerName: user.displayName });
       toast.success("Car added successfully!");
       setFormData({ carName: "", description: "", category: "Sedan", rentPrice: "", location: "", image: "", status: "available" });
     } catch (err) {

@@ -7,7 +7,7 @@ const TopRatedCars = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/top-rated-cars") 
+      .get("https://mywheels.vercel.app/top-rated-cars") 
       .then((res) => setCars(res.data))
       .catch((err) => console.error(err));
   }, []);

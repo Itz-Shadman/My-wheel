@@ -13,7 +13,7 @@ const CarDetails = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/cars/${id}`)
+    axios.get(`https://mywheels.vercel.app/cars/${id}`)
       .then(res => setCar(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -24,7 +24,7 @@ const CarDetails = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:3000/book", {
+      await axios.post("https://mywheels.vercel.app/book", {
         userEmail,
         carId: car._id,
         carName: car.carName,

@@ -12,7 +12,7 @@ const MyBookings = ({ userEmail }) => {
     if (!userEmail) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:3000/myBookings?email=${userEmail}`);
+      const res = await axios.get(`https://mywheels.vercel.app/myBookings?email=${userEmail}`);
       setBookings(res.data);
     } catch (err) {
       console.error(err);
@@ -32,7 +32,7 @@ const MyBookings = ({ userEmail }) => {
   const handleUnbook = async (id) => {
     if (!window.confirm("Cancel this booking?")) return;
     try {
-      await axios.delete(`http://localhost:3000/myBookings/${id}`);
+      await axios.delete(`https://mywheels.vercel.app/myBookings/${id}`);
       toast.success("Booking cancelled!");
       setBookings(bookings.filter(b => b._id !== id));
       window.dispatchEvent(new Event("booking-updated"));

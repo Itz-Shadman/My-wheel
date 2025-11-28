@@ -7,7 +7,7 @@ const FeaturedCars = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/featured-cars")
+      .get("https://mywheels.vercel.app/featured-cars")
       .then(res => setCars(res.data))
       .catch(err => console.error(err));
   }, []);

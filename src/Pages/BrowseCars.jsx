@@ -12,7 +12,7 @@ const BrowseCars = ({ userEmail }) => {
   const fetchCars = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:3000/cars");
+      const res = await axios.get("https://mywheels.vercel.app/cars");
       setCars(res.data);
     } catch (err) {
       console.error(err);
@@ -47,7 +47,7 @@ const BrowseCars = ({ userEmail }) => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:3000/book", bookingData);
+      await axios.post("https://mywheels.vercel.app/book", bookingData);
       setCars(cars.map(c => c._id === car._id ? { ...c, status: "unavailable" } : c));
       toast.success("Car booked!");
       window.dispatchEvent(new Event("booking-updated"));

@@ -13,7 +13,7 @@ const MyListings = () => {
   const fetchCars = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:3000/cars");
+      const res = await axios.get("https://mywheels.vercel.app/cars");
       setCars(res.data);
     } catch (err) {
       console.error(err);
@@ -31,7 +31,7 @@ const MyListings = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this car?")) return;
     try {
-      await axios.delete(`http://localhost:3000/cars/${id}`);
+      await axios.delete(`https://mywheels.vercel.app/cars/${id}`);
       toast.success("Car deleted!");
       setCars(cars.filter((car) => car._id !== id));
     } catch (err) {
@@ -62,7 +62,7 @@ const MyListings = () => {
     e.preventDefault();
     try {
       await axios.patch(
-        `http://localhost:3000/cars/${editingCar._id}`,
+        `https://mywheels.vercel.app/${editingCar._id}`,
         {
           carName: editingCar.carName,
           carCategory: editingCar.category,
