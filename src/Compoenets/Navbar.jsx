@@ -9,7 +9,6 @@ const Navbar = () => {
   const [userDropdown, setUserDropdown] = useState(false);
   const [dark, setDark] = useState(false);
 
-  // Load theme from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
@@ -78,7 +77,7 @@ const Navbar = () => {
         </li>
       )}
 
-      {/* Dark Mode Toggle */}
+  
       <li className="md:hidden mt-2">
         <button
           onClick={toggleTheme}
@@ -94,12 +93,12 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-100 dark:bg-gray-900 shadow-xl sticky top-0 z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
-        {/* Logo */}
+        
         <span className="text-3xl font-extrabold text-yellow-500 dark:text-yellow-400">
           Rent<span className="text-gray-900 dark:text-white">Car</span>
         </span>
 
-        {/* Desktop Menu + Dark Toggle */}
+      
         <ul className="hidden md:flex space-x-6 text-gray-800 dark:text-gray-200 items-center">
           {menuItems}
           <li>
@@ -112,7 +111,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Mobile Menu Button */}
+       
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-gray-800 dark:text-gray-200 text-2xl"
@@ -121,7 +120,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+     
       {menuOpen && (
         <ul className="md:hidden bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col p-4 space-y-2 transition-colors duration-300">
           {menuItems}

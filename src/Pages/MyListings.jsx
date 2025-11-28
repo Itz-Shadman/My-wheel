@@ -62,7 +62,7 @@ const MyListings = () => {
     e.preventDefault();
     try {
       await axios.patch(
-        `https://mywheels.vercel.app/${editingCar._id}`,
+        `https://mywheels.vercel.app/cars/${editingCar._id}`,
         {
           carName: editingCar.carName,
           carCategory: editingCar.category,
